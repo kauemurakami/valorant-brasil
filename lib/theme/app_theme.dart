@@ -3,5 +3,5 @@ import 'package:valorant_brasil/theme/colors_theme.dart';
 
 final ThemeData appThemeData = ThemeData(
   primaryColor: mainColor,
-  accentColor: Colors.white,
+  accentColor: Colors.black,
 );

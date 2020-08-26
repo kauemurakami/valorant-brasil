@@ -23,7 +23,7 @@ class AgentesPage extends GetView<AgentesController> {
                   ),
                 ),
                 extent: 100.0,
-                image: new ExactAssetImage(
+                image: new AssetImage(
                   'assets/images/bg.jpg',
                 ),
               ),
