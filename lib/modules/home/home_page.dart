@@ -6,9 +6,6 @@ import 'home_controller.dart';
 class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('HomePage')),
-      body: Container(child: Text('home')),
-    );
+    return Scaffold(body: SafeArea(child: Text('aaa')));
   }
 }
