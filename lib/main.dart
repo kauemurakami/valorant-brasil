@@ -8,6 +8,7 @@ import 'modules/home/home_page.dart';
 void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
+    defaultTransition: Transition.fadeIn,
     home: HomePage(),
     initialBinding: HomeBinding(),
     getPages: AppPages.pages,

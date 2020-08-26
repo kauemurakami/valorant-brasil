@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:valorant_brasil/modules/agente_detail/agente_detail_binding.dart';
+import 'package:valorant_brasil/modules/agente_detail/agente_detail_page.dart';
 import 'package:valorant_brasil/modules/agentes/agentes_binding.dart';
 import 'package:valorant_brasil/modules/agentes/agentes_page.dart';
 import 'package:valorant_brasil/modules/armas/armas_binding.dart';
@@ -25,8 +27,17 @@ abstract class AppPages {
     GetPage(
         name: Routes.ARMAS, page: () => ArmasPage(), binding: ArmasBinding()),
     GetPage(
-        name: Routes.ARMAS,
+        name: Routes.TORNEIOS,
         page: () => TorneiosPage(),
         binding: TorneiosBinding()),
+    GetPage(
+        name: Routes.AGENTE_DETAIL,
+        page: () => AgenteDetailPage(),
+        binding: AgenteDetailBinding()),
+
+    //  GetPage(
+    // name: Routes.MAP_DETAIL,
+    // page: () => MapDetailPage(),
+    // binding: MapDetailBinding()),
   ];
 }
