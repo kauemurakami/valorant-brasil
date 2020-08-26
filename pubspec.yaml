@@ -23,7 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get:
+  bloc: ^6.0.0
+  flutter_bloc: ^6.0.0
+  get: ^3.3.0
   parallax_image: 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -49,6 +51,7 @@ flutter:
     - assets/images/bg.jpg
     - assets/images/bgmenu.jpg
     - assets/images/brvav.png
+    - assets/infos/agentes.json
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
