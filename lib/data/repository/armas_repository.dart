@@ -4,4 +4,6 @@ import 'package:http/http.dart' as http;
 
 class ArmasRepository {
   final api = ValorantApi(httpClient: http.Client());
+
+  loadArmas() => api.getArmas();
 }

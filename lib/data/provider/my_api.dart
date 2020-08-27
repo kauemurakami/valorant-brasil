@@ -13,13 +13,13 @@ class ValorantApi {
 
   getArmas() async {
     var response = await httpClient.get('$baseUrl/armas.json');
-    print(response.body);
+    //print(response.body);
     return armasFromJson(response.body);
   }
 
   getAgentes() async {
     var response = await httpClient.get('$baseUrl/agentes.json');
-    print(response.body);
+    //print(response.body);
     return agentesFromJson(response.body);
   }
 }

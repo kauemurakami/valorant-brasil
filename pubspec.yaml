@@ -50,7 +50,9 @@ flutter:
   assets:
     - assets/images/bg.jpg
     - assets/images/bgmenu.jpg
+    - assets/images/bg_arma.jpg
     - assets/images/brvav.png
+    - assets/images/arma.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
