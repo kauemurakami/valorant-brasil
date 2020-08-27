@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flip_card:
   get: 
   http:
   parallax_image: 
@@ -50,7 +51,6 @@ flutter:
     - assets/images/bg.jpg
     - assets/images/bgmenu.jpg
     - assets/images/brvav.png
-    - assets/infos/agentes.json
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
