@@ -1,17 +1,14 @@
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:valorant_brasil/data/repository/agentes.dart';
 
 class AgentesController extends GetxController {
+  final repository = AgentesRepository();
+
   @override
   void onInit() {
-    loadAgentes();
+    repository.loadAgentes().then((data) => listAgentes.value = data);
     super.onInit();
-  }
-
-  loadAgentes() async {
-    this.listAgentes.value = agentesFromJson(
-        await rootBundle.loadString('assets/infos/agentes.json'));
   }
 
   final listAgentes = List<Agentes>().obs;
