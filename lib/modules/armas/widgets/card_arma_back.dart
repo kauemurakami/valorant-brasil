@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/arma_model.dart';
+import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
 
 class CardArmaBack extends StatelessWidget {
@@ -21,7 +22,7 @@ class CardArmaBack extends StatelessWidget {
             )),
       ),
       Container(
-        height: 200,
+        height: 250,
         width: Get.width,
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -34,38 +35,141 @@ class CardArmaBack extends StatelessWidget {
                 style: bannerArmaBack,
               ),
             ),
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: arma.distncia.length,
-                  itemBuilder: (context, index) {
-                    return Text(arma.distncia[index]);
-                  }),
+            Container(
+              margin: EdgeInsets.only(top: 8.0),
+              height: 30,
+              width: Get.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: mainColor)),
+                      child: Center(
+                          child: Text(
+                        'Distância',
+                        style: TextStyle(color: mainColor),
+                      ))),
+                  Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: arma.distncia.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              height: 70,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 1, color: mainColor)),
+                              child: Center(
+                                child: Text(
+                                  arma.distncia[index],
+                                  style: TextStyle(color: mainColor),
+                                ),
+                              ));
+                        }),
+                  ),
+                ],
+              ),
             ),
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: arma.dano.length,
-                  itemBuilder: (context, index) {
-                    return Text(arma.dano[index].cabeca);
-                  }),
-            ),
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: arma.dano.length,
-                  itemBuilder: (context, index) {
-                    return Text(arma.dano[index].corpo);
-                  }),
-            ),
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: arma.dano.length,
-                  itemBuilder: (context, index) {
-                    return Text(arma.dano[index].pernas);
-                  }),
-            )
+            Container(
+                height: 30,
+                width: Get.width,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: mainColor)),
+                      child: Center(
+                          child: Text(
+                        'Cabeça',
+                        style: TextStyle(color: mainColor),
+                      ))),
+                  Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: arma.dano.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              height: 70,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 1, color: mainColor)),
+                              child: Center(
+                                  child: Text(arma.dano[index].cabeca,
+                                      style: TextStyle(color: mainColor))));
+                        }),
+                  ),
+                ])),
+            Container(
+                height: 30,
+                width: Get.width,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: mainColor)),
+                      child: Center(
+                          child: Text(
+                        'Corpo',
+                        style: TextStyle(color: mainColor),
+                      ))),
+                  Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: arma.dano.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              height: 70,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 1, color: mainColor)),
+                              child: Center(
+                                  child: Text(
+                                arma.dano[index].corpo,
+                                style: TextStyle(color: mainColor),
+                              )));
+                        }),
+                  ),
+                ])),
+            Container(
+                height: 30,
+                width: Get.width,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: mainColor)),
+                      child: Center(
+                          child: Text(
+                        'Pernas',
+                        style: TextStyle(color: mainColor),
+                      ))),
+                  Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: arma.dano.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              height: 70,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 1, color: mainColor)),
+                              child: Center(
+                                  child: Text(
+                                arma.dano[index].pernas,
+                                style: TextStyle(color: mainColor),
+                              )));
+                        }),
+                  )
+                ])),
           ],
         ),
       ),
