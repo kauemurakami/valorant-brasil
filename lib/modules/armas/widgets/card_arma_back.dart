@@ -22,13 +22,14 @@ class CardArmaBack extends StatelessWidget {
             )),
       ),
       Container(
+        margin: EdgeInsets.only(left: 24.0),
         height: 250,
         width: Get.width,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              padding: EdgeInsets.only(top: 8.0, right: 8.0),
               width: Get.width,
               child: Text(
                 arma.descricao,
