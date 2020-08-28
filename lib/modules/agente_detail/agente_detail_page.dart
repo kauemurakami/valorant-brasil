@@ -43,6 +43,11 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                             ),
                           ],
                         ),
+                        Expanded(
+                          child: Image.network(
+                            'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/agentes/${controller.agente.nome.toLowerCase()}.png',
+                          ),
+                        )
                       ],
                     ),
                   ))
