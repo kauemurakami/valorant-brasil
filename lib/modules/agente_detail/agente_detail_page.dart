@@ -50,7 +50,11 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                         )
                       ],
                     ),
-                  ))
+                  )),
+              Container(
+                child: Image.network(
+                    'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/gifs/habilidades/${controller.agente.nome.toLowerCase()}/${controller.agente.nome.toLowerCase()}-c.gif'),
+              )
             ],
           ),
         ),
