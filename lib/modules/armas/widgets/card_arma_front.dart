@@ -12,7 +12,8 @@ class CardArmaFront extends StatelessWidget {
       width: Get.width,
       height: 100,
       child: Stack(children: [
-        Image.asset('assets/images/arma.png'),
+        Image.network(
+            'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/armas/${arma.nome.toLowerCase()}.png'),
         Positioned(
             top: 8.0,
             left: 8.0,

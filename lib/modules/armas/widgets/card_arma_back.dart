@@ -18,7 +18,8 @@ class CardArmaBack extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/images/arma.png'))),
+                      image: NetworkImage(
+                          'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/armas/${arma.nome.toLowerCase()}.png'))),
             )),
       ),
       Container(
