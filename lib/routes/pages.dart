@@ -5,18 +5,21 @@ import 'package:valorant_brasil/modules/agentes/agentes_binding.dart';
 import 'package:valorant_brasil/modules/agentes/agentes_page.dart';
 import 'package:valorant_brasil/modules/armas/armas_binding.dart';
 import 'package:valorant_brasil/modules/armas/armas_page.dart';
+import 'package:valorant_brasil/modules/home/home_binding.dart';
 import 'package:valorant_brasil/modules/home/home_page.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_binding.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_page.dart';
+import 'package:valorant_brasil/modules/splash/splash_page.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_binding.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_page.dart';
 part './routes.dart';
 
 abstract class AppPages {
   static final pages = [
+    GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
     GetPage(
-      name: Routes.HOME,
-      page: () => HomePage(),
+      name: Routes.SPLASH,
+      page: () => SplashPage(),
     ),
     GetPage(
         name: Routes.AGENTES,

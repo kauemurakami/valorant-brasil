@@ -10,8 +10,9 @@ class ArmasPage extends GetView<ArmasController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
-        child: Obx(() => controller.armas.length == null
+        child: Obx(() => controller.armas.length < 1
             ? CustomLoading()
             : Stack(children: [
                 Container(

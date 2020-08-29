@@ -37,7 +37,7 @@ class HabilidadeGif extends StatelessWidget {
               Container(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    '${controller.agente.habilidades[controller.index].descricao}',
+                    '${controller.agente.habilidades[controller.index].letra} - ${controller.agente.habilidades[controller.index].descricao}',
                     style: habilidadeDescricao,
                   ))
             ],

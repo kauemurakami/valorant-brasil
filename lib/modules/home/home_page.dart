@@ -8,6 +8,7 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(

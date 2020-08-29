@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:parallax_image/parallax_image.dart';
+import 'package:valorant_brasil/data/model/mapa_model.dart';
 import 'package:valorant_brasil/routes/pages.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
 
 class CustomMapItem extends InkWell {
-  final String map;
+  final Mapas map;
   CustomMapItem(this.map);
 
   @override
@@ -22,7 +23,7 @@ class CustomMapItem extends InkWell {
               padding: const EdgeInsets.only(top: 8.0),
               child: Center(
                 child: Text(
-                  map,
+                  map.nome,
                   style: listAgents,
                 ),
               ),

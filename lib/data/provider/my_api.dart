@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
 import 'package:valorant_brasil/data/model/arma_model.dart';
+import 'package:valorant_brasil/data/model/mapa_model.dart';
 
 const baseUrl =
     'https://raw.githubusercontent.com/kauemurakami/valorant-api/master';
@@ -10,6 +11,12 @@ const baseUrl =
 class ValorantApi {
   final http.Client httpClient;
   ValorantApi({@required this.httpClient});
+
+  getMapas() async {
+    var response = await httpClient.get('$baseUrl/mapas.json');
+    //print(response.body);
+    return mapasFromJson(response.body);
+  }
 
   getArmas() async {
     var response = await httpClient.get('$baseUrl/armas.json');
