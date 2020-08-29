@@ -8,3 +8,4 @@ final titleAgente =
 final agenteBio = TextStyle(fontSize: 18.0, color: Colors.white);
 final bannerArmaFront = TextStyle(fontSize: 18.0, color: mainColor);
 final bannerArmaBack = TextStyle(fontSize: 14.0, color: mainColor);
+final habilidadeDescricao = TextStyle(fontSize: 16.0, color: Colors.white);

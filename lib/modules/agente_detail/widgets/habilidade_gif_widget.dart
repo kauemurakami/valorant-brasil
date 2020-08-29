@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
 import 'package:valorant_brasil/modules/agente_detail/agente_detail_controller.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
+import 'package:valorant_brasil/theme/text_theme.dart';
 
 class HabilidadeGif extends StatelessWidget {
   final Agentes agente;
@@ -34,8 +35,11 @@ class HabilidadeGif extends StatelessWidget {
                 },
               ),
               Container(
+                  padding: EdgeInsets.all(16.0),
                   child: Text(
-                      '${controller.agente.habilidades[controller.index].descricao}'))
+                    '${controller.agente.habilidades[controller.index].descricao}',
+                    style: habilidadeDescricao,
+                  ))
             ],
           ),
         ));
