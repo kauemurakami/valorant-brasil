@@ -1,3 +1,7 @@
+// To parse this JSON data, do
+//
+//     final agentes = agentesFromJson(jsonString);
+
 import 'dart:convert';
 
 List<Agentes> agentesFromJson(String str) =>
@@ -43,37 +47,18 @@ class Habilidade {
   });
 
   String nome;
-  Letra letra;
+  String letra;
   String descricao;
 
   factory Habilidade.fromJson(Map<String, dynamic> json) => Habilidade(
         nome: json["nome"],
-        letra: letraValues.map[json["letra"]],
+        letra: json["letra"],
         descricao: json["descricao"],
       );
 
   Map<String, dynamic> toJson() => {
         "nome": nome,
-        "letra": letraValues.reverse[letra],
+        "letra": letra,
         "descricao": descricao,
       };
-}
-
-enum Letra { Q, E, C, X }
-
-final letraValues =
-    EnumValues({"C": Letra.C, "E": Letra.E, "Q": Letra.Q, "X": Letra.X});
-
-class EnumValues<T> {
-  Map<String, T> map;
-  Map<T, String> reverseMap;
-
-  EnumValues(this.map);
-
-  Map<T, String> get reverse {
-    if (reverseMap == null) {
-      reverseMap = map.map((k, v) => new MapEntry(v, k));
-    }
-    return reverseMap;
-  }
 }

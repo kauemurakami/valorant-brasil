@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valorant_brasil/modules/agente_detail/agente_detail_controller.dart';
+import 'package:valorant_brasil/modules/agente_detail/widgets/habilidade_gif_widget.dart';
+import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
+import 'package:valorant_brasil/widgets/custom_loading.dart';
 
 class AgenteDetailPage extends GetView<AgenteDetailController> {
   @override
@@ -19,42 +22,55 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                   width: Get.width,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Row(
+                    child: Column(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
                           children: [
-                            Text(
-                              controller.agente.nome,
-                              style: titleAgente,
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  controller.agente.nome,
+                                  style: titleAgente,
+                                ),
+                                Text(
+                                  controller.agente.classe,
+                                  style: TextStyle(
+                                      fontSize: 24.0, color: Colors.grey),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.only(top: 16.0),
+                                  width: Get.width / 2,
+                                  child: Text(
+                                    controller.agente.bio,
+                                    style: agenteBio,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              controller.agente.classe,
-                              style:
-                                  TextStyle(fontSize: 24.0, color: Colors.grey),
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(top: 16.0),
-                              width: Get.width / 2,
-                              child: Text(
-                                controller.agente.bio,
-                                style: agenteBio,
+                            Expanded(
+                              child: Image.network(
+                                'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/agentes/${controller.agente.nome.toLowerCase()}.png',
                               ),
-                            ),
+                            )
                           ],
                         ),
                         Expanded(
-                          child: Image.network(
-                            'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/agentes/${controller.agente.nome.toLowerCase()}.png',
-                          ),
-                        )
+                            child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: controller.agente.habilidades.length,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    child: Text(
+                                      '${controller.agente.habilidades[index].letra}',
+                                      style: agenteBio,
+                                    ),
+                                  );
+                                }))
                       ],
                     ),
                   )),
-              Container(
-                child: Image.network(
-                    'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/gifs/habilidades/${controller.agente.nome.toLowerCase()}/${controller.agente.nome.toLowerCase()}-c.gif'),
-              )
+              HabilidadeGif(controller.agente)
             ],
           ),
         ),
