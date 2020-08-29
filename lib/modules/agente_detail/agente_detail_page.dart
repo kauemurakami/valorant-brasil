@@ -4,7 +4,6 @@ import 'package:valorant_brasil/modules/agente_detail/agente_detail_controller.d
 import 'package:valorant_brasil/modules/agente_detail/widgets/habilidade_gif_widget.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
-import 'package:valorant_brasil/widgets/custom_loading.dart';
 
 class AgenteDetailPage extends GetView<AgenteDetailController> {
   @override
@@ -56,21 +55,36 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                           ],
                         ),
                         Expanded(
+                            flex: 1,
                             child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 itemCount: controller.agente.habilidades.length,
                                 itemBuilder: (context, index) {
                                   return Container(
-                                    child: Text(
-                                      '${controller.agente.habilidades[index].letra}',
-                                      style: agenteBio,
+                                    child: FlatButton(
+                                      splashColor: mainColor,
+                                      shape: new RoundedRectangleBorder(
+                                          side: BorderSide(
+                                              style: BorderStyle.solid,
+                                              color: mainColor,
+                                              width: 1),
+                                          borderRadius:
+                                              new BorderRadius.circular(50.0)),
+                                      onPressed: () {
+                                        controller.index = index;
+                                        print(controller.index);
+                                      },
+                                      child: Text(
+                                        '${controller.agente.habilidades[index].letra}',
+                                        style: agenteBio,
+                                      ),
                                     ),
                                   );
                                 }))
                       ],
                     ),
                   )),
-              HabilidadeGif(controller.agente)
+              Container(child: HabilidadeGif(controller.agente))
             ],
           ),
         ),
