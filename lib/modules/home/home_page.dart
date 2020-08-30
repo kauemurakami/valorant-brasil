@@ -9,22 +9,27 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        body: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage('assets/images/bgmenu.jpg'))),
-            width: Get.width,
-            height: Get.height,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset('assets/images/brvav.png'),
-                CustomContainerMenu('AGENTES', () => controller.agente()),
-                CustomContainerMenu('ARMAS', () => controller.armas()),
-                CustomContainerMenu('MAPAS', () => controller.mapas()),
-                CustomContainerMenu('TORNEIOS', () => controller.torneios()),
-              ],
-            )));
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/images/bgmenu.jpg'))),
+                width: Get.width,
+                height: Get.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/brvav.png'),
+                    CustomContainerMenu('AGENTES', () => controller.agente()),
+                    CustomContainerMenu('ARMAS', () => controller.armas()),
+                    CustomContainerMenu('MAPAS', () => controller.mapas()),
+                    CustomContainerMenu(
+                        'TORNEIOS', () => controller.torneios()),
+                  ],
+                )),
+          ),
+        ));
   }
 }
