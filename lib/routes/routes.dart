@@ -8,5 +8,5 @@ abstract class Routes {
   static const MAPAS = '/mapas';
   static const SPLASH = '/splash';
   static const AGENTE_DETAIL = '/agente-detail';
-  static const MAP_DETAIL = '/map-detail';
+  static const MAPA_DETAIL = '/mapa-detail';
 }

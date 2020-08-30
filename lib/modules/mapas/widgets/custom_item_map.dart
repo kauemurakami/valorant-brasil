@@ -15,7 +15,7 @@ class CustomMapItem extends InkWell {
     return InkWell(
         highlightColor: mainColor,
         splashColor: mainColor,
-        onTap: () => Get.toNamed(Routes.MAP_DETAIL, arguments: this.map),
+        onTap: () => Get.toNamed(Routes.MAPA_DETAIL, arguments: this.map),
         child: Container(
           width: Get.width,
           child: new ParallaxImage(

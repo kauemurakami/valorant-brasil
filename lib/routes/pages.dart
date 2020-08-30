@@ -7,6 +7,8 @@ import 'package:valorant_brasil/modules/armas/armas_binding.dart';
 import 'package:valorant_brasil/modules/armas/armas_page.dart';
 import 'package:valorant_brasil/modules/home/home_binding.dart';
 import 'package:valorant_brasil/modules/home/home_page.dart';
+import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_binding.dart';
+import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_page.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_binding.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_page.dart';
 import 'package:valorant_brasil/modules/splash/splash_page.dart';
@@ -37,10 +39,9 @@ abstract class AppPages {
         name: Routes.AGENTE_DETAIL,
         page: () => AgenteDetailPage(),
         binding: AgenteDetailBinding()),
-
-    //  GetPage(
-    // name: Routes.MAP_DETAIL,
-    // page: () => MapDetailPage(),
-    // binding: MapDetailBinding()),
+    GetPage(
+        name: Routes.MAPA_DETAIL,
+        page: () => MapaDetailPage(),
+        binding: MapaDetailBinding()),
   ];
 }

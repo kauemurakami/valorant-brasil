@@ -18,7 +18,7 @@ class ArmasPage extends GetView<ArmasController> {
                 Container(
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/images/bg_arma.jpg'),
+                            image: AssetImage('assets/images/bgmenu.jpg'),
                             repeat: ImageRepeat.repeatY)),
                     height: Get.height,
                     width: Get.width,
