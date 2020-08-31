@@ -14,57 +14,35 @@ class Mapas {
   Mapas({
     this.nome,
     this.dicas,
+    this.descricao,
     this.qtBombs,
     this.vantagem,
-    this.dreamTeam,
+    this.melhoresAgentes,
   });
 
   String nome;
   List<String> dicas;
+  String descricao;
   int qtBombs;
   String vantagem;
-  List<DreamTeam> dreamTeam;
+  List<String> melhoresAgentes;
 
   factory Mapas.fromJson(Map<String, dynamic> json) => Mapas(
         nome: json["nome"],
         dicas: List<String>.from(json["dicas"].map((x) => x)),
+        descricao: json["descricao"],
         qtBombs: json["qt_bombs"],
         vantagem: json["vantagem"],
-        dreamTeam: List<DreamTeam>.from(
-            json["dream_team"].map((x) => DreamTeam.fromJson(x))),
+        melhoresAgentes:
+            List<String>.from(json["melhores_agentes"].map((x) => x)),
       );
 
   Map<String, dynamic> toJson() => {
         "nome": nome,
         "dicas": List<dynamic>.from(dicas.map((x) => x)),
+        "descricao": descricao,
         "qt_bombs": qtBombs,
         "vantagem": vantagem,
-        "dream_team": List<dynamic>.from(dreamTeam.map((x) => x.toJson())),
-      };
-}
-
-class DreamTeam {
-  DreamTeam({
-    this.ataque,
-    this.defesa,
-  });
-
-  List<String> ataque;
-  List<String> defesa;
-
-  factory DreamTeam.fromJson(Map<String, dynamic> json) => DreamTeam(
-        ataque: json["ataque"] == null
-            ? null
-            : List<String>.from(json["ataque"].map((x) => x)),
-        defesa: json["defesa"] == null
-            ? null
-            : List<String>.from(json["defesa"].map((x) => x)),
-      );
-
-  Map<String, dynamic> toJson() => {
-        "ataque":
-            ataque == null ? null : List<dynamic>.from(ataque.map((x) => x)),
-        "defesa":
-            defesa == null ? null : List<dynamic>.from(defesa.map((x) => x)),
+        "melhores_agentes": List<dynamic>.from(melhoresAgentes.map((x) => x)),
       };
 }
