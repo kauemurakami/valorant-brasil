@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "486247112908",
+    "firebase_url": "https://valorant-br-hu3.firebaseio.com",
+    "project_id": "valorant-br-hu3",
+    "storage_bucket": "valorant-br-hu3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486247112908:android:5d58598f582a7af9ade269",
+        "android_client_info": {
+          "package_name": "com.example.valorant_brasil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486247112908-fkm5nvmj7n8a8vbv7ojsfo7p10cok928.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.valorant_brasil",
+            "certificate_hash": "1f3efd258565d09f62ce62e80e45d988342a0c14"
+          }
+        },
+        {
+          "client_id": "486247112908-vibi4ps23h41u61jl80m2m447f9ms0b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn6ji1W2eT9LmfFg_vIZBG0PxoY5s71sI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486247112908-vibi4ps23h41u61jl80m2m447f9ms0b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
