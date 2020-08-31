@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:valorant_brasil/data/provider/my_api.dart';
 import 'package:http/http.dart' as http;
 

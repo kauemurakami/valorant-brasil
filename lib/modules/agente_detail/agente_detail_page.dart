@@ -79,7 +79,7 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                                       );
                                     },
                                   ),
-                                )
+                                ),
                               ],
                             ),
                             Container(
