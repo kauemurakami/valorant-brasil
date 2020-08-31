@@ -8,6 +8,8 @@ class HomeController extends GetxController {
   armas() => Get.toNamed(Routes.ARMAS);
   mapas() => Get.toNamed(Routes.MAPAS);
   torneios() => Get.toNamed(Routes.TORNEIOS);
+  publicacoes() => Get.toNamed(Routes.PUBLICACOES);
+
   @override
   void onInit() {
     ValorantApi(httpClient: http.Client()).getAgentes();

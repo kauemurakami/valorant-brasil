@@ -10,7 +10,7 @@ class CustomContainerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(top: 16.0),
+        margin: EdgeInsets.only(bottom: 16.0),
         width: 300,
         height: 80,
         decoration: BoxDecoration(

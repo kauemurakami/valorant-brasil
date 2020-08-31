@@ -19,18 +19,39 @@ class _TorneiosPageState extends State<TorneiosPage> {
   @override
   void initState() {
     super.initState();
- FirebaseAdMob.instance
-      .initialize(appId: 'ca-app-pub-8290430432077975~4623122828');
+    FirebaseAdMob.instance
+        .initialize(appId: 'ca-app-pub-8290430432077975~4623122828');
     myInterstitial = InterstitialAd(
       // Replace the testAdUnitId with an ad unit id from the AdMob dash.
       // https://developers.google.com/admob/android/test-ads
       // https://developers.google.com/admob/ios/test-ads
-      adUnitId: InterstitialAd.testAdUnitId,
+      adUnitId: 'ca-app-pub-8290430432077975/7861312641',
       targetingInfo: MobileAdTargetingInfo(
-        keywords: <String>['flutterio', 'beautiful apps'],
+        keywords: <String>[
+          'e sports',
+          'games',
+          'riot',
+          'valorant',
+          'fps',
+          '5v5',
+          'csgo',
+          'agentes',
+          'valorant brasil',
+          'torneios',
+          'e games',
+          'skins',
+          'passe de batalha',
+          'campeonatos valorant brasil',
+          'riot games',
+          'lol',
+          'league of legends',
+          'placa de video',
+          'intel',
+          'amd',
+          'ryzen'
+        ],
         contentUrl: 'https://flutter.io',
         childDirected: false,
-
         testDevices: <
             String>[], // Android emulators are considered test devices
       ),

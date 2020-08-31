@@ -11,6 +11,8 @@ import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_binding.dart';
 import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_page.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_binding.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_page.dart';
+import 'package:valorant_brasil/modules/publicacoes/publicacoes_binding.dart';
+import 'package:valorant_brasil/modules/publicacoes/publicacoes_page.dart';
 import 'package:valorant_brasil/modules/splash/splash_page.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_binding.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_page.dart';
@@ -43,5 +45,9 @@ abstract class AppPages {
         name: Routes.MAPA_DETAIL,
         page: () => MapaDetailPage(),
         binding: MapaDetailBinding()),
+    GetPage(
+        name: Routes.PUBLICACOES,
+        page: () => PublicacoesPage(),
+        binding: PublicacoesBinding()),
   ];
 }
