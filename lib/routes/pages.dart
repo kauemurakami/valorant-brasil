@@ -11,9 +11,13 @@ import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_binding.dart';
 import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_page.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_binding.dart';
 import 'package:valorant_brasil/modules/mapas/mapas_page.dart';
+import 'package:valorant_brasil/modules/publicacao_detail/publicacao_detail_binding.dart';
+import 'package:valorant_brasil/modules/publicacao_detail/publicacao_detail_page.dart';
 import 'package:valorant_brasil/modules/publicacoes/publicacoes_binding.dart';
 import 'package:valorant_brasil/modules/publicacoes/publicacoes_page.dart';
 import 'package:valorant_brasil/modules/splash/splash_page.dart';
+import 'package:valorant_brasil/modules/torneio_detail/torneio_detail_binding.dart';
+import 'package:valorant_brasil/modules/torneio_detail/torneio_detail_page.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_binding.dart';
 import 'package:valorant_brasil/modules/torneios/torneios_page.dart';
 part './routes.dart';
@@ -21,6 +25,14 @@ part './routes.dart';
 abstract class AppPages {
   static final pages = [
     GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
+    GetPage(
+        name: Routes.PUBLICACAO_DETAIL,
+        page: () => PublicacaoDetailPage(),
+        binding: PublicacaoDetailBinding()),
+    GetPage(
+        name: Routes.TORNEIO_DETAIL,
+        page: () => TorneioDetailPage(),
+        binding: TorneioDetailBinding()),
     GetPage(
       name: Routes.SPLASH,
       page: () => SplashPage(),

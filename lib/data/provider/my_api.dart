@@ -3,6 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
 import 'package:valorant_brasil/data/model/arma_model.dart';
 import 'package:valorant_brasil/data/model/mapa_model.dart';
+import 'package:valorant_brasil/data/model/publicacoes_model.dart';
 import 'package:valorant_brasil/data/model/torneio_model.dart';
 
 const baseUrl =
@@ -11,6 +12,12 @@ const baseUrl =
 class ValorantApi {
   final http.Client httpClient;
   ValorantApi({@required this.httpClient});
+
+  getPublicacoes() async {
+    var response = await httpClient.get('$baseUrl/publicacoes.json');
+    //print(response.body);
+    return publicacoesFromJson(response.body);
+  }
 
   getTorneios() async {
     var response = await httpClient.get('$baseUrl/torneios.json');

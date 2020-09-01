@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/torneio_model.dart';
+import 'package:valorant_brasil/routes/pages.dart';
+import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
 
 class TorneioCard extends Container {
@@ -24,28 +26,23 @@ class TorneioCard extends Container {
             style: torneioTitle,
           ),
           Text(
-            torneio.dataInicio,
-            style: torneioDados,
-          ),
-          Text(
-            torneio.dataFim,
+            'Início do torneio : ${torneio.dataInicio}',
             style: torneioDados,
           ),
           Text(
             'Inscrição ${torneio.valorIncricao}',
             style: torneioValores,
           ),
-          Text(
-            'Premiação ${torneio.premiacao}',
-            style: torneioValores,
-          ),
-          Text(
-            'Acompanhe ${torneio.acompanharEvento}',
-            style: torneioDados,
-          ),
-          Text(
-            'Realizador ${torneio.contatoRealizador}',
-            style: torneioDados,
+          Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+            child: FlatButton(
+                color: mainColor,
+                onPressed: () =>
+                    Get.toNamed(Routes.TORNEIO_DETAIL, arguments: this.torneio),
+                child: Text(
+                  'Mais informações',
+                  style: TextStyle(color: Colors.white),
+                )),
           ),
         ],
       ),

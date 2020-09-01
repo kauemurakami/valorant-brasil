@@ -28,7 +28,9 @@ class _TorneiosPageState extends State<TorneiosPage> {
       adUnitId: 'ca-app-pub-8290430432077975/7861312641',
       targetingInfo: MobileAdTargetingInfo(
         keywords: <String>[
-          'e sports',
+          'jogos de tiro',
+          'jogos de fps'
+              'e sports',
           'games',
           'riot',
           'valorant',
@@ -45,12 +47,17 @@ class _TorneiosPageState extends State<TorneiosPage> {
           'riot games',
           'lol',
           'league of legends',
-          'placa de video',
-          'intel',
-          'amd',
-          'ryzen'
+          'placa de video valorant',
+          'intel valorant',
+          'amd valorant ',
+          'ryzen valorant',
+          'hs valorant',
+          'head shot',
+          'armas valorant',
+          'weapons valorant',
+          'valorant infos'
         ],
-        contentUrl: 'https://flutter.io',
+        contentUrl: 'https://github.com/kauemurakami',
         childDirected: false,
         testDevices: <
             String>[], // Android emulators are considered test devices

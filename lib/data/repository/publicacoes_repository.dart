@@ -4,4 +4,6 @@ import 'package:http/http.dart' as http;
 
 class PublicacoesRepository {
   final ValorantApi api = ValorantApi(httpClient: http.Client());
+
+  getPublicacoes() => api.getPublicacoes();
 }
