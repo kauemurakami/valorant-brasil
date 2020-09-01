@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valorant_brasil/modules/publicacoes/publicacoes_controller.dart';
 import 'package:valorant_brasil/modules/publicacoes/widgets/publicacao_card.dart';
-import 'package:valorant_brasil/modules/torneios/torneios_controller.dart';
-import 'package:valorant_brasil/modules/torneios/widgets/torneio_card.dart';
 import 'package:valorant_brasil/widgets/back_bottom_navigation.dart';
 import 'package:valorant_brasil/widgets/custom_loading.dart';
 
