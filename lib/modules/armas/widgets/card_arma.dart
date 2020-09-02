@@ -14,7 +14,7 @@ class CardArma extends StatelessWidget {
     return Stack(children: [
       Container(
         padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-        height: 240,
+        height: 250,
         width: Get.width,
         child: FlipCard(
           front: CardArmaFront(this.arma),

@@ -35,10 +35,22 @@ class AgenteDetailPage extends GetView<AgenteDetailController> {
                                       controller.agente.nome,
                                       style: titleAgente,
                                     ),
-                                    Text(
-                                      controller.agente.classe,
-                                      style: TextStyle(
-                                          fontSize: 24.0, color: Colors.grey),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          controller.agente.classe,
+                                          style: TextStyle(
+                                              fontSize: 24.0,
+                                              color: Colors.grey),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(left: 8.0),
+                                          height: 25,
+                                          width: 25,
+                                          child: Image.network(
+                                              'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/classes_icones_agentes/${controller.agente.classe.toLowerCase()}.png'),
+                                        )
+                                      ],
                                     ),
                                     Container(
                                       padding: EdgeInsets.only(top: 16.0),

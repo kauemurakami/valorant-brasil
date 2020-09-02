@@ -15,6 +15,11 @@ class Armas {
     this.nome,
     this.penetraoParede,
     this.pente,
+    this.cadencia,
+    this.velocidadeCorrida,
+    this.velocidadeEquipar,
+    this.dispercaoTiroIniciail,
+    this.velocidadeRecarregar,
     this.preco,
     this.distncia,
     this.dano,
@@ -24,8 +29,13 @@ class Armas {
   });
 
   String nome;
-  PenetraoParede penetraoParede;
+  String penetraoParede;
   String pente;
+  String cadencia;
+  String velocidadeCorrida;
+  String velocidadeEquipar;
+  dynamic dispercaoTiroIniciail;
+  String velocidadeRecarregar;
   String preco;
   List<String> distncia;
   List<Dano> dano;
@@ -37,8 +47,19 @@ class Armas {
         nome: json["nome"],
         penetraoParede: json["penetração_parede"] == null
             ? null
-            : penetraoParedeValues.map[json["penetração_parede"]],
+            : json["penetração_parede"],
         pente: json["pente"] == null ? null : json["pente"],
+        cadencia: json["cadencia"] == null ? null : json["cadencia"],
+        velocidadeCorrida: json["velocidade_corrida"] == null
+            ? null
+            : json["velocidade_corrida"],
+        velocidadeEquipar: json["velocidade_equipar"] == null
+            ? null
+            : json["velocidade_equipar"],
+        dispercaoTiroIniciail: json["dispercao_tiro_iniciail"],
+        velocidadeRecarregar: json["velocidade_recarregar"] == null
+            ? null
+            : json["velocidade_recarregar"],
         preco: json["preco"] == null ? null : json["preco"],
         distncia: json["distância"] == null
             ? null
@@ -53,10 +74,16 @@ class Armas {
 
   Map<String, dynamic> toJson() => {
         "nome": nome,
-        "penetração_parede": penetraoParede == null
-            ? null
-            : penetraoParedeValues.reverse[penetraoParede],
+        "penetração_parede": penetraoParede == null ? null : penetraoParede,
         "pente": pente == null ? null : pente,
+        "cadencia": cadencia == null ? null : cadencia,
+        "velocidade_corrida":
+            velocidadeCorrida == null ? null : velocidadeCorrida,
+        "velocidade_equipar":
+            velocidadeEquipar == null ? null : velocidadeEquipar,
+        "dispercao_tiro_iniciail": dispercaoTiroIniciail,
+        "velocidade_recarregar":
+            velocidadeRecarregar == null ? null : velocidadeRecarregar,
         "preco": preco == null ? null : preco,
         "distância": distncia == null
             ? null
@@ -92,26 +119,4 @@ class Dano {
         "corpo": corpo,
         "pernas": pernas,
       };
-}
-
-enum PenetraoParede { BAIXA, MEDIA, ALTA }
-
-final penetraoParedeValues = EnumValues({
-  "alta": PenetraoParede.ALTA,
-  "baixa": PenetraoParede.BAIXA,
-  "media": PenetraoParede.MEDIA
-});
-
-class EnumValues<T> {
-  Map<String, T> map;
-  Map<T, String> reverseMap;
-
-  EnumValues(this.map);
-
-  Map<T, String> get reverse {
-    if (reverseMap == null) {
-      reverseMap = map.map((k, v) => new MapEntry(v, k));
-    }
-    return reverseMap;
-  }
 }

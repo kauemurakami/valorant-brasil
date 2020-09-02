@@ -11,7 +11,7 @@ class CardArmaFront extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
-      height: 100,
+      height: 250,
       child: Stack(children: [
         Image.network(
           'https://raw.githubusercontent.com/kauemurakami/valorant-br-api/master/images/armas/${arma.nome.toLowerCase()}.png',
@@ -40,14 +40,92 @@ class CardArmaFront extends StatelessWidget {
               style: bannerArmaFront,
             ))),
         Positioned(
-            bottom: 8.0,
+            top: 32.0,
             left: 8.0,
             child: Container(
-                width: Get.width,
-                child: Text(
-                  arma.bio,
-                  style: bannerArmaFront,
-                )))
+                child: Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Tipo',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Cadência',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Penetração',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Pente',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Portabilidade',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Recarregar',
+                          style: agenteBio,
+                        ),
+                        Text(
+                          'Equipar',
+                          style: agenteBio,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            arma.tipo,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.cadencia,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.penetraoParede,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.pente,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.velocidadeCorrida,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.velocidadeRecarregar,
+                            style: bannerArmaFront,
+                          ),
+                          Text(
+                            arma.velocidadeEquipar,
+                            style: bannerArmaFront,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ))),
       ]),
     );
   }
