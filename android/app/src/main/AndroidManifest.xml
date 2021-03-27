@@ -12,9 +12,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="valorant_brasil"
         android:icon="@mipmap/ic_launcher">
-         <meta-data
-              android:name="com.google.android.gms.ads.APPLICATION_ID"
-              android:value="ca-app-pub-8290430432077975~7861312641"/>
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

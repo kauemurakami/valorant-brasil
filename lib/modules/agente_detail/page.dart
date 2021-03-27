@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:valorant_brasil/modules/agente_detail/agente_detail_controller.dart';
+import 'package:valorant_brasil/modules/agente_detail/controller.dart';
 import 'package:valorant_brasil/modules/agente_detail/widgets/habilidade_gif_widget.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:valorant_brasil/modules/armas/controller.dart';
 import 'package:valorant_brasil/modules/armas/widgets/card_arma.dart';
 import 'package:valorant_brasil/widgets/back_bottom_navigation.dart';
 import 'package:valorant_brasil/widgets/custom_loading.dart';
-
-import 'armas_controller.dart';
 
 class ArmasPage extends GetView<ArmasController> {
   @override
@@ -12,10 +11,8 @@ class ArmasPage extends GetView<ArmasController> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
-        child: Obx(
-          () => controller.armas.length < 1
-              ? CustomLoading()
-              : Container(
+        child: this.controller.obx(
+              (state) => Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/bg.jpg'),
@@ -24,11 +21,13 @@ class ArmasPage extends GetView<ArmasController> {
                   height: Get.height,
                   width: Get.width,
                   child: ListView.builder(
-                      itemCount: controller.armas.length,
+                      itemCount: state.length,
                       itemBuilder: (context, index) {
-                        return CardArma(controller.armas[index]);
+                        return CardArma(state[index]);
                       })),
-        ),
+              onLoading: CustomLoading(),
+              onError: (error) => Center(child: Text(error)),
+            ),
       ),
       bottomNavigationBar: BackBottomButton('Voltar ao menu inicial'),
     );

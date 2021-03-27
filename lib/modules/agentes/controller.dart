@@ -1,17 +1,22 @@
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
-import 'package:valorant_brasil/data/repository/agentes.dart';
 
-class AgentesController extends GetxController {
-  final repository = AgentesRepository();
-
+class AgentesController extends GetxController with StateMixin<List<Agentes>> {
+  final repository;
+  AgentesController(this.repository);
   @override
   void onInit() {
-    repository.loadAgentes().then((data) => listAgentes.value = data);
-    super.onInit();
+    repository.getAgentes().then((resp) {
+      change(resp, status: RxStatus.success());
+    }, onError: (err) {
+      print(err);
+      change(
+        null,
+        status: RxStatus.error('Erro ao recuperar Agentes'),
+      );
+      super.onInit();
+    });
   }
-
-  final listAgentes = List<Agentes>().obs;
 
   final _agente = Agentes().obs;
   get agente => this._agente.value;

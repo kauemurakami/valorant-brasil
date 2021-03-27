@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/agentes_model.dart';
-import 'package:valorant_brasil/modules/agente_detail/agente_detail_controller.dart';
+import 'package:valorant_brasil/modules/agente_detail/controller.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
 

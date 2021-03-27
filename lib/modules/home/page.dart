@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:valorant_brasil/modules/home/controller.dart';
 import 'package:valorant_brasil/modules/home/widgets/custom_menu_item.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
-import 'package:valorant_brasil/theme/text_theme.dart';
-
-import 'home_controller.dart';
 
 class HomePage extends GetView<HomeController> {
   @override

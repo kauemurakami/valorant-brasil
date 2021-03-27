@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:valorant_brasil/modules/mapa_detail/mapa_detail_controller.dart';
+import 'package:valorant_brasil/modules/mapa_detail/controller.dart';
 import 'package:valorant_brasil/theme/colors_theme.dart';
 import 'package:valorant_brasil/theme/text_theme.dart';
 import 'package:valorant_brasil/widgets/back_bottom_navigation.dart';
