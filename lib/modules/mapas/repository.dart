@@ -1,7 +1,9 @@
+import 'package:valorant_brasil/data/provider/my_api.dart';
+
 class MapasRepository {
-  final api;
+  final ValorantApi api;
 
   MapasRepository(this.api);
 
-  getMaps() => this.api.getMapas();
+  getMapas() => this.api.getMapas();
 }

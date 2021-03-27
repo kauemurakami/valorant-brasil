@@ -30,9 +30,9 @@ class HomePage extends GetView<HomeController> {
                   CustomContainerMenu('AGENTES', () => controller.agente()),
                   CustomContainerMenu('ARMAS', () => controller.armas()),
                   CustomContainerMenu('MAPAS', () => controller.mapas()),
-                  CustomContainerMenu('TORNEIOS', () => controller.torneios()),
-                  CustomContainerMenu(
-                      'PUBLICAÇÕES', () => controller.publicacoes()),
+                  // CustomContainerMenu('TORNEIOS', () => controller.torneios()),
+                  // CustomContainerMenu(
+                  //     'PUBLICAÇÕES', () => controller.publicacoes()),
                   Container(
                       margin: EdgeInsets.only(bottom: 16.0),
                       width: 300,

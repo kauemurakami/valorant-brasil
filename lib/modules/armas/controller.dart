@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
 import 'package:valorant_brasil/data/model/arma_model.dart';
-import 'package:valorant_brasil/data/repository/armas_repository.dart';
 
 class ArmasController extends GetxController with StateMixin<List<Armas>> {
-  final repository = ArmasRepository();
-
+  final repository;
+  ArmasController(this.repository);
   @override
   void onInit() {
     this.repository.loadArmas().then((resp) {

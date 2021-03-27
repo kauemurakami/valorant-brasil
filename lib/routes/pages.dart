@@ -16,11 +16,7 @@ import 'package:valorant_brasil/modules/publicacao_detail/page.dart';
 import 'package:valorant_brasil/modules/publicacoes/binding.dart';
 import 'package:valorant_brasil/modules/publicacoes/page.dart';
 import 'package:valorant_brasil/modules/splash/splash.dart';
-import 'package:valorant_brasil/modules/torneio_detail/binding.dart';
-import 'package:valorant_brasil/modules/torneio_detail/page.dart';
 
-import 'package:valorant_brasil/modules/torneios/torneios_binding.dart';
-import 'package:valorant_brasil/modules/torneios/torneios_page.dart';
 part './routes.dart';
 
 abstract class AppPages {
@@ -30,10 +26,6 @@ abstract class AppPages {
         name: Routes.PUBLICACAO_DETAIL,
         page: () => PublicacaoDetailPage(),
         binding: PublicacaoDetailBinding()),
-    GetPage(
-        name: Routes.TORNEIO_DETAIL,
-        page: () => TorneioDetailPage(),
-        binding: TorneioDetailBinding()),
     GetPage(
       name: Routes.SPLASH,
       page: () => SplashPage(),
@@ -46,10 +38,6 @@ abstract class AppPages {
         name: Routes.MAPAS, page: () => MapasPage(), binding: MapasBinding()),
     GetPage(
         name: Routes.ARMAS, page: () => ArmasPage(), binding: ArmasBinding()),
-    GetPage(
-        name: Routes.TORNEIOS,
-        page: () => TorneiosPage(),
-        binding: TorneiosBinding()),
     GetPage(
         name: Routes.AGENTE_DETAIL,
         page: () => AgenteDetailPage(),
